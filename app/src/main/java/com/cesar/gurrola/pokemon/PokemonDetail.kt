@@ -1,21 +1,18 @@
 package com.cesar.gurrola.pokemon
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.cesar.gurrola.pokemon.databinding.FragmentSecondBinding
+import com.cesar.gurrola.pokemon.databinding.PokemonDetailBinding
 
-class SecondFragment : Fragment() {
+class PokemonDetail : Fragment() {
 
-private var _binding: FragmentSecondBinding? = null
+private var _binding: PokemonDetailBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-      _binding = FragmentSecondBinding.inflate(inflater, container, false)
+      _binding = PokemonDetailBinding.inflate(inflater, container, false)
       return binding.root
 
     }
@@ -26,8 +23,15 @@ private var _binding: FragmentSecondBinding? = null
         /*binding.buttonSecond.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }*/
+
+
     }
-override fun onDestroyView() {
+
+
+
+
+
+    override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.cesar.gurrola.pokemon.FirstFragment"
+        android:name="com.cesar.gurrola.pokemon.PokemonList"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first" >
 
@@ -17,9 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.cesar.gurrola.pokemon.SecondFragment"
+        android:name="com.cesar.gurrola.pokemon.PokemonDetail"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second" >
+        tools:layout="@layout/pokemon_detail" >
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
