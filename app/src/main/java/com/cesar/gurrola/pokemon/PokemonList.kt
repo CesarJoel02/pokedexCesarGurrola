@@ -1,6 +1,7 @@
 package com.cesar.gurrola.pokemon
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
@@ -10,10 +11,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.cesar.gurrola.pokemon.databinding.FragmentFirstBinding
 import com.cesar.gurrola.pokemon.databinding.PokemonItemBinding
+import com.cesar.gurrola.pokemon.domain.repository.ApiClient
 
 class PokemonList : Fragment() {
 
-    private var _binding: PokemonItemBinding? = null
+    private var _binding: FragmentFirstBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,7 +24,7 @@ class PokemonList : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = PokemonItemBinding.inflate(inflater, container, false)
+        _binding = FragmentFirstBinding.inflate(inflater, container, false)
         setHasOptionsMenu(true)
         return binding.root
     }
