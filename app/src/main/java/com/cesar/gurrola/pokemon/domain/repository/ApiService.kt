@@ -1,14 +1,15 @@
 package com.cesar.gurrola.pokemon.domain.repository
 
-import com.cesar.gurrola.pokemon.domain.models.pokemonListResponse
+import com.cesar.gurrola.pokemon.domain.models.PokemonListResponseModel
 import io.reactivex.Observable
 import retrofit2.http.GET
-
-private const val BASE_URL = "https://pokeapi.co/api/v2/"
+import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET("/")
-    fun fetchPokemonData(): Observable<pokemonListResponse>
-
+    @GET("pokemon/")
+    fun fetchPokemonData(
+       @Query("limit") limit: Int = 0,
+       @Query("offset") offset: Int = 0,
+    ): Observable<PokemonListResponseModel>
 }

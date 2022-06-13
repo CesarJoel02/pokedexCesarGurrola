@@ -1,6 +1,6 @@
 package com.cesar.gurrola.pokemon.domain.models
 
-data class pokemonDetail(
+data class PokemonDetailModel(
     val abilities: List<Ability>,
     val base_experience: Int,
     val forms: List<Form>,

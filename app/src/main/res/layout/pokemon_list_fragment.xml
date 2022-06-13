@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PokemonList">
+    tools:context=".PokemonListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycler_pokemon_list"
         android:layout_margin="16dp"
-        tools:listitem="@layout/pokemon_item"/>
+        tools:listitem="@layout/pokemon_item_list"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
